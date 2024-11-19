@@ -1,0 +1,6 @@
+django-backend
+transaction/.env
+db.sqlite3
+env-trans
+
+
