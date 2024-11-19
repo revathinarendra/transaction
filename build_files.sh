@@ -9,12 +9,11 @@
 # Install dependencies from requirements.txt
 /usr/bin/python3.9 -m pip install -r requirements.txt
 
-# Create static directory if it doesn't exist
-mkdir -p /vercel/path0/static
+# Create the public/static directory for Vercel
+mkdir -p public/static
 
-# Collect static files
+# Collect static files into the public/static directory
 python3.9 manage.py collectstatic --noinput
 
-# Apply database migrations
-python3.9 manage.py makemigrations
+# Apply database migrations (migrations should already exist)
 python3.9 manage.py migrate
